@@ -1,0 +1,17 @@
+.container {
+    width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.change-size {
+    border-radius: 8px;
+    padding: 8px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    margin: 20px auto;
+}
