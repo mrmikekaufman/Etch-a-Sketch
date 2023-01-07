@@ -2,7 +2,7 @@ const container = document.querySelector('.container');
 
 for (let i=0; i < (256); i++) {
     let div = document.createElement('div');
-    div.style.cssText = 'height: 60px; width: 60px; background-color: white; border: .5px solid black';
+    div.style.cssText = 'height: 59px; width: 59px; background-color: white; border: .5px solid black';
     container.appendChild(div);
 }
 
@@ -44,7 +44,9 @@ function changeSize() {
     removeAllChildNodes(container);
 
     for (let i=0; i < (num * num); i++) {
-        let size = 965 / num; //space remaining after accounting for gap
+        let borders = num * 2;//Total number of borders for divs
+        let totalBorderWidth = .5 * borders;//total number of pixels in each row due to borders
+        let size = (960 - totalBorderWidth) / num ; //calculated size of divs
         let div = document.createElement('div');
         div.style.cssText = `height: ${size}px; width: ${size}px; background-color: white; border: .5px solid black;`;
         container.appendChild(div);
