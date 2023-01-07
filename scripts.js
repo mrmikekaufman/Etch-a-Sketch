@@ -44,7 +44,7 @@ function changeSize() {
     removeAllChildNodes(container);
 
     for (let i=0; i < (num * num); i++) {
-        let size = 960 / num; //space remaining after accounting for gap
+        let size = 965 / num; //space remaining after accounting for gap
         let div = document.createElement('div');
         div.style.cssText = `height: ${size}px; width: ${size}px; background-color: white; border: .5px solid black;`;
         container.appendChild(div);
@@ -55,4 +55,3 @@ function changeSize() {
 }
 
 changeGrid.addEventListener('click', () => {changeSize()});
-
